@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio Website</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/f0ade2979d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+</body>
+</head>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/son (1).png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portpolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>My 1st Portfolio Webpage</p>
+            <h1> Hi, I'm <span>Sondrick</span><br>From Philippines</h1>
+        </div>
+    </div>
+</div>
+<!----------about---------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/hutao.png" alt="">
+            </div>
+            <div class="about-col-2">
+                
+                <h1 class="sub-title">About Me</h1>
+            <P>
+                I'm a Student from Asia Pacific College and this is <br>
+                My 1st webpage Profile
+                doing this Activity from <br>My WEBPROG Subject
+            </P>
+                 <br>
+                 <br>
+                 <div class="tab-titles">
+                    <P class="tab-links active-links" onclick="opentab('skills')">Skills</P>
+                    <P class="tab-links" onclick="opentab('experience')">Experience</P>
+                    <P class="tab-links" onclick="opentab('education')">Education</P>
+                 </div>
+                 <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web deplopment</span><br>Designing Web</pan></li>
+                        <li><span>Playing Sports</span><br>Taekwondo/Basketball</pan></li>
+                        <li><span>Playing video games</span><br>FPS games/Moba games/gacha games</pan></li>
+                    </ul>
+                 </div>
+                 <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 Current</span><br>Website Page</pan></li>
+                        <li><span>2023 Current</span><br> Database Extraction </pan></li>
+                    </ul>
+                 </div>
+                 <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023 Current learning Website Page</span><br>WEBPROG Subject</pan></li>
+                        <li><span>2023 Current learning Database Extraction</span><br> DATAMA1 Subject</pan></li>
+                    </ul>
+                 </div>
+            
+            </div>
+        </div>
+    </div>
+
+</div>
+
+          </div>
+    </div>
+</div>
+
+            <div class="contact-right"></div>
+            
+        </div>
+    </div>
+</div>
+<!-------------Services---------------->
+<div id="services">
+   <div class="container"> 
+<h1 class="sub-title">My Services</h1>
+<div class="services-list">
+    <div>
+        <i class="fa-brands fa-html5"></i>
+        <h2>Open for Commission On Html </h2>
+        <p>Languages: html</p>
+        <a href="#">Learn more</a>
+    </div>
+    <div>
+        <i class="fa-brands fa-java"></i>
+        <h2>Open for Commission On Java/JavaScript</h2>
+        <p>Languages: Java/JavaScript</p>
+        <a href="#">Learn more</a>
+    </div>
+    <div>
+        <i class="fa-brands fa-python"></i>
+        <h2>Open for Commission On Python</h2>
+        <p>Languages: Python</p>
+        <a href="#">Learn more</a>
+    </div>
+</div>
+
+   </div>
+</div>
+<!-----------------contact-------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i>Kajikkusu@gmail.com</p>
+                <P><i class="fa-solid fa-phone"></i>09126716515</P>
+                <div class="social-icons">
+                    <a href="https://facebook.com/sondrick.frondozo.35"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                
+            <div class="contact-right">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="name" placeholder="Your Name required">
+                <input type="email" name="email" placeholder="Your Email" required>      
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>  
+                <button type="submit"class="btn btn2">Submit</button>    
+            </form>
+            <span id="msg"></span>
+        </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Son.made with <i class="fa-solid fa-heart"></i> WEBPROG Website</p>
+
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-links");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+        
+    }
+
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxPW_TG9uzuCsU1k0NqzdSQUz7lb9fxXegSqRdGEijjcLbET0pTQWmknwDwFN5YvvX5/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg =document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML =""
+                }, 5000)
+                form.reset()
+
+            })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
